@@ -9,3 +9,11 @@ body {
   padding: 0;
   margin: 0;
 }
+
+@font-face {
+  font-family: "CMedium";
+  src: url("/fonts/ClashDisplay-Medium.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

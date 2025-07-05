@@ -1,5 +1,32 @@
 .main {
   width: 100vw;
   height: 100vh;
-  background-color: red;
+  background-color: transparent;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300vw;
+}
+
+.singlePhrase {
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.2rem;
+  font-family: "Cmedium";
+  color: white;
+  text-shadow: -1px -1px 0 #ff0e33, 1px -1px 0 #ff0e33, -1px 1px 0 #ff0e33,
+    1px 1px 0 #ff0e33;
+  font-size: 35px;
+}
+
+.heart {
+  display: flex;
+  padding: 0 2rem 0 2rem;
+}
+
+.sliderContainer {
+  display: flex;
+  width: 300vw;
 }
