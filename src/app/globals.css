@@ -17,3 +17,19 @@ body {
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "NRegular";
+  src: url("/fonts/NeueMetana-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EdSonar";
+  src: url("/fonts/ED-Sonar-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

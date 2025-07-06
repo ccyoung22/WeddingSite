@@ -13,11 +13,11 @@
   display: flex;
   align-items: center;
   letter-spacing: 0.2rem;
-  font-family: "Cmedium";
-  color: white;
-  text-shadow: -1px -1px 0 #ff0e33, 1px -1px 0 #ff0e33, -1px 1px 0 #ff0e33,
-    1px 1px 0 #ff0e33;
-  font-size: 60px;
+  font-family: "EdSonar";
+  color: #ff0e33;
+  /* text-shadow: -1px -1px 0 #ff0e33, 1px -1px 0 #ff0e33, -1px 1px 0 #ff0e33,
+    1px 1px 0 #ff0e33; */
+  font-size: 50px;
 }
 
 .heart {
@@ -27,7 +27,7 @@
 
 .sliderContainer {
   display: flex;
-  padding: 2rem 0 2rem 0;
+  padding: 3rem 0 3rem 0;
   position: relative;
   white-space: nowrap;
 }
@@ -39,7 +39,7 @@
   }
 
   .singlePhrase {
-    text-shadow: -2px -2px 0 #ff0e33, 2px -2px 0 #ff0e33, -2px 2px 0 #ff0e33,
-      2px 2px 0 #ff0e33;
+    /* text-shadow: -2px -2px 0 #ff0e33, 2px -2px 0 #ff0e33, -2px 2px 0 #ff0e33,
+      2px 2px 0 #ff0e33; */
   }
 }
