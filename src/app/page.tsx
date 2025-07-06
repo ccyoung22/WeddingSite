@@ -6,8 +6,6 @@ import Footer from "./components/Footer/Footer";
 import AllTheInfo from "./components/AllTheInfo/AllTheInfo";
 import Lenis from "lenis";
 
-import Image from "next/image";
-
 import { useEffect } from "react";
 
 export default function Home() {

@@ -1,23 +1,46 @@
 import styles from "./WereGettingMarried.module.css";
 import Image from "next/image";
+import { MotionValue, useScroll, useTransform, motion } from "framer-motion";
+import { useRef } from "react";
 
 export default function WereGettingMarried() {
+  const container = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start end", "end start"],
+  });
+
   return (
     <main className={styles.main}>
-      <Slider />
-      <Slider />
-      <Slider />
+      <div className={styles.parentDiv} ref={container}>
+        <Slider left="-55%" progress={scrollYProgress} direction="left" />
+        <Slider left="-15%" progress={scrollYProgress} direction="right" />
+        <Slider left="-70%" progress={scrollYProgress} direction="left" />
+      </div>
     </main>
   );
 }
 
-const Slider = () => {
+const Slider = ({
+  left,
+  progress,
+  direction,
+}: {
+  left: string;
+  progress: MotionValue<number>;
+  direction: string;
+}) => {
+  const dir = direction == "left" ? -1 : 1;
+  const x = useTransform(progress, [0, 1], [-250 * dir, 250 * dir]);
   return (
-    <div className={styles.sliderContainer}>
+    <motion.div className={styles.sliderContainer} style={{ left, x }}>
       <Phrase />
       <Phrase />
       <Phrase />
-    </div>
+      <Phrase />
+      <Phrase />
+    </motion.div>
   );
 };
 
@@ -26,7 +49,7 @@ const Phrase = () => {
     <div className={styles.singlePhrase}>
       <h1>We&apos;re Getting Married</h1>
       <div className={styles.heart}>
-        <Image src="/assets/BlurHeart.png" alt="heart" width={70} height={70} />
+        <Image src="/assets/star.png" alt="heart" width={100} height={100} />
       </div>
     </div>
   );

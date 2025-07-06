@@ -5,9 +5,8 @@
   border: 1px solid black;
   display: flex;
   flex-direction: column;
-  align-items: center;
+
   justify-content: center;
-  width: 300vw;
 }
 
 .singlePhrase {
@@ -18,7 +17,7 @@
   color: white;
   text-shadow: -1px -1px 0 #ff0e33, 1px -1px 0 #ff0e33, -1px 1px 0 #ff0e33,
     1px 1px 0 #ff0e33;
-  font-size: 35px;
+  font-size: 60px;
 }
 
 .heart {
@@ -28,5 +27,19 @@
 
 .sliderContainer {
   display: flex;
-  width: 300vw;
+  padding: 2rem 0 2rem 0;
+  position: relative;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .sliderContainer {
+    scale: 0.5;
+    padding: 1rem 0 1rem 0;
+  }
+
+  .singlePhrase {
+    text-shadow: -2px -2px 0 #ff0e33, 2px -2px 0 #ff0e33, -2px 2px 0 #ff0e33,
+      2px 2px 0 #ff0e33;
+  }
 }
