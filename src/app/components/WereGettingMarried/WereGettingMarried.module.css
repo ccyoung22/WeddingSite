@@ -1,8 +1,8 @@
 .main {
   width: 100vw;
-  height: 100vh;
+  height: 140vh;
   background-color: transparent;
-  border: 1px solid black;
+
   display: flex;
   flex-direction: column;
 
@@ -17,7 +17,15 @@
   color: #ff0e33;
   /* text-shadow: -1px -1px 0 #ff0e33, 1px -1px 0 #ff0e33, -1px 1px 0 #ff0e33,
     1px 1px 0 #ff0e33; */
-  font-size: 50px;
+  font-size: 40px;
+}
+
+.phraseText {
+  transition: color 0.3s ease;
+}
+
+.phraseText:hover {
+  color: #ffdcfa;
 }
 
 .heart {

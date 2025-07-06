@@ -47,7 +47,7 @@ const Slider = ({
 const Phrase = () => {
   return (
     <div className={styles.singlePhrase}>
-      <h1>We&apos;re Getting Married</h1>
+      <h1 className={styles.phraseText}>We&apos;re Getting Married</h1>
       <div className={styles.heart}>
         <Image src="/assets/blurHeart.png" alt="heart" width={40} height={40} />
       </div>
