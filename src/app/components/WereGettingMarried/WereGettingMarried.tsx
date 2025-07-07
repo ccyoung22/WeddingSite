@@ -49,7 +49,7 @@ const Phrase = () => {
     <div className={styles.singlePhrase}>
       <h1 className={styles.phraseText}>We&apos;re Getting Married</h1>
       <div className={styles.heart}>
-        <Image src="/assets/blurHeart.png" alt="heart" width={40} height={40} />
+        <Image src="/assets/blurHeart.png" alt="heart" width={70} height={70} />
       </div>
     </div>
   );
