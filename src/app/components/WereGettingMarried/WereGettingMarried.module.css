@@ -17,7 +17,7 @@
   color: #ff0e33;
   /* text-shadow: -1px -1px 0 #ff0e33, 1px -1px 0 #ff0e33, -1px 1px 0 #ff0e33,
     1px 1px 0 #ff0e33; */
-  font-size: 6vh;
+  font-size: 4vh;
 }
 
 .phraseText {
@@ -35,7 +35,7 @@
 
 .sliderContainer {
   display: flex;
-  padding: 3rem 0 3rem 0;
+  padding: 4rem 0 4rem 0;
   position: relative;
   white-space: nowrap;
 }

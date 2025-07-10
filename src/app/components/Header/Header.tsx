@@ -14,7 +14,8 @@ export default function Header() {
         <Image
           src={"/assets/HeaderEnvelope.png"}
           alt={"Envelope"}
-          fill
+          width={800}
+          height={800}
           style={{ objectFit: "contain" }}
         />
       </motion.div>

@@ -16,7 +16,7 @@ export default function WereGettingMarried() {
       <div className={styles.parentDiv} ref={container}>
         <Slider left="-55%" progress={scrollYProgress} direction="left" />
         <Slider left="-15%" progress={scrollYProgress} direction="right" />
-        <Slider left="-70%" progress={scrollYProgress} direction="left" />
+        <Slider left="-100%" progress={scrollYProgress} direction="left" />
       </div>
     </main>
   );
@@ -49,7 +49,7 @@ const Phrase = () => {
     <div className={styles.singlePhrase}>
       <h1 className={styles.phraseText}>We&apos;re Getting Married</h1>
       <div className={styles.heart}>
-        <Image src="/assets/blurHeart.png" alt="heart" width={70} height={70} />
+        <Image src="/assets/blurHeart.png" alt="heart" width={60} height={60} />
       </div>
     </div>
   );

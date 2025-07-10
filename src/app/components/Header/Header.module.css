@@ -1,30 +1,53 @@
 .main {
   width: 100vw;
+  min-width: 1200px;
   height: 100vh;
   background-color: transparent;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(8, 12.5vw);
+  grid-template-rows: repeat(8, 12.5vh);
   margin-bottom: 30vh;
 }
 
 .envelopeContainer {
-  position: absolute;
-  width: 650px;
+  /* Remove position: absolute */
+
   aspect-ratio: 3/2;
-  grid-column: 3;
-  grid-row: 3;
+
+  /* Place in center of grid (columns 2-4, rows 2-4) */
+  grid-column: 3 / 7;
+  grid-row: 3 / 7;
+
+  /* Center within the grid area */
   justify-self: center;
   align-self: center;
-
+  margin-right: 30px;
   padding: 20px;
 }
 
 .cherubBoy {
   position: relative;
-  width: 170px;
-  height: 150px;
-  grid-column: 5;
-  grid-row: 5;
-  padding-bottom: 250px;
+  width: 12.5vw;
+  height: 18vh;
+  /* Place in bottom-right area (column 5, row 5) */
+  grid-column: 7; /* Place in 7th column */
+  grid-row: 7;
+
+  justify-self: end; /* Align to right edge of 7th column */
+  align-self: center;
+
+  transform: translateX(50%); /* Shift right by half its width */
+
+  /* Add floating animation */
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateX(50%) translateY(0);
+  }
+  50% {
+    transform: translateX(50%) translateY(-10px);
+  }
 }
