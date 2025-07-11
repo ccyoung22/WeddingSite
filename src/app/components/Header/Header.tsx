@@ -13,18 +13,18 @@ export default function Header() {
       >
         <img
           className={styles.cassyoung}
-          src="/assets/cass-young.png"
+          src="/assets/darker-card.png"
           alt="Envelope"
         />
       </motion.div>
-      <div className={styles.bottomTextDiv}>
+      {/* <div className={styles.bottomTextDiv}>
         <div>
           <h1>26/06/26</h1>
         </div>
         <div>
           <h1>TERRICOLA, PISA</h1>
         </div>
-      </div>
+      </div> */}
 
       {/* <div className={styles.cherubBoy}>
         <Image

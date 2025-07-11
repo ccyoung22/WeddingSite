@@ -6,7 +6,7 @@
   display: grid;
   grid-template-columns: repeat(8, 12.5vw);
   grid-template-rows: repeat(8, 12.5vh);
-  margin-bottom: 30vh;
+  margin-bottom: 10vh;
 }
 
 .envelopeContainer {
@@ -14,7 +14,7 @@
   grid-row: 4 / 6;
   justify-self: center;
   align-self: center;
-  margin-top: 15vh;
+
   margin-right: 2vw;
   display: flex;
   align-items: center;
@@ -22,7 +22,7 @@
 }
 
 .cassyoung {
-  width: 90vw;
+  width: 60vw;
   justify-self: end;
   align-self: end;
 }
