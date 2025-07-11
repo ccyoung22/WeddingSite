@@ -11,22 +11,29 @@ export default function Header() {
         transition={{ duration: 0.8 }}
         className={styles.envelopeContainer}
       >
-        <Image
-          src={"/assets/HeaderEnvelope.png"}
-          alt={"Envelope"}
-          width={800}
-          height={800}
-          style={{ objectFit: "contain" }}
+        <img
+          className={styles.cassyoung}
+          src="/assets/cass-young.png"
+          alt="Envelope"
         />
       </motion.div>
-      <div className={styles.cherubBoy}>
+      <div className={styles.bottomTextDiv}>
+        <div>
+          <h1>26/06/26</h1>
+        </div>
+        <div>
+          <h1>TERRICOLA, PISA</h1>
+        </div>
+      </div>
+
+      {/* <div className={styles.cherubBoy}>
         <Image
           src={"/assets/cherub-boy.png"}
           alt={"Cherub"}
           fill
           style={{ objectFit: "contain" }}
         />
-      </div>
+      </div> */}
     </main>
   );
 }

@@ -49,7 +49,13 @@ const Phrase = () => {
     <div className={styles.singlePhrase}>
       <h1 className={styles.phraseText}>We&apos;re Getting Married</h1>
       <div className={styles.heart}>
-        <Image src="/assets/blurHeart.png" alt="heart" width={60} height={60} />
+        <Image
+          src="/assets/cherub-boy.png"
+          alt="heart"
+          width={100}
+          height={100}
+          style={{ objectFit: "contain" }}
+        />
       </div>
     </div>
   );

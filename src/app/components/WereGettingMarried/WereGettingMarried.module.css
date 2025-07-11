@@ -12,21 +12,20 @@
 .singlePhrase {
   display: flex;
   align-items: center;
-  letter-spacing: 0.2rem;
   font-family: "EdSonar";
-  color: #ff0e33;
-  /* text-shadow: -1px -1px 0 #ff0e33, 1px -1px 0 #ff0e33, -1px 1px 0 #ff0e33,
-    1px 1px 0 #ff0e33; */
+  color: #fb1e3f;
   font-size: 4vh;
+  letter-spacing: 0.3rem;
+  font-weight: 50;
 }
 
 .phraseText {
   transition: color 0.3s ease;
 }
 
-.phraseText:hover {
+/* .phraseText:hover {
   color: #ffdcfa;
-}
+} */
 
 .heart {
   display: flex;
