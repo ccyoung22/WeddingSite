@@ -26,6 +26,15 @@ body {
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "CBold";
+  src: url("/fonts/ClashDisplay-Bold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @font-face {
   font-family: "CExtraLight";
   src: url("/fonts/ClashDisplay-Extralight.otf") format("opentype");
@@ -42,14 +51,6 @@ body {
 @font-face {
   font-family: "EdSonar";
   src: url("/fonts/ED-Sonar-Regular.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "MLight";
-  src: url("/fonts/Milton_One.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;

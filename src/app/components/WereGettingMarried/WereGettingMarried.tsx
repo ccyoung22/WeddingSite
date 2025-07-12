@@ -47,16 +47,19 @@ const Slider = ({
 const Phrase = () => {
   return (
     <div className={styles.singlePhrase}>
-      <h1 className={styles.phraseText}>We&apos;re Getting Married -</h1>
-      {/* <div className={styles.heart}>
+      <h1 className={styles.phraseText}>We&apos;re Getting Married</h1>
+      <div className={styles.heart}>
         <Image
-          src="/assets/cherub-boy.png"
+          src={"/assets/brownChrub.png"}
           alt="heart"
           width={100}
           height={100}
           style={{ objectFit: "contain" }}
         />
-      </div> */}
+      </div>
     </div>
   );
 };
+
+// "/assets/BlurHeartBrown.png";
+// "/assets/brownChrub.png";

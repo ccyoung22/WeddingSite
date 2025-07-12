@@ -13,22 +13,14 @@ export default function Header() {
       >
         <img
           className={styles.cassyoung}
-          src="/assets/darker-card.png"
+          src="/assets/BurgundyPostCard.png"
           alt="Envelope"
         />
       </motion.div>
-      {/* <div className={styles.bottomTextDiv}>
-        <div>
-          <h1>26/06/26</h1>
-        </div>
-        <div>
-          <h1>TERRICOLA, PISA</h1>
-        </div>
-      </div> */}
 
       {/* <div className={styles.cherubBoy}>
         <Image
-          src={"/assets/cherub-boy.png"}
+          src={"/assets/brownChrub.png"}
           alt={"Cherub"}
           fill
           style={{ objectFit: "contain" }}
