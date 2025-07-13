@@ -13,7 +13,7 @@ export default function Header() {
       >
         <img
           className={styles.cassyoung}
-          src="/assets/BurgundyPostCard.png"
+          src="/assets/NewPostCard.png"
           alt="Envelope"
         />
       </motion.div>
