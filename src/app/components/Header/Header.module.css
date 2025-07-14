@@ -6,7 +6,7 @@
   display: grid;
   grid-template-columns: repeat(8, 12.5vw);
   grid-template-rows: repeat(8, 12.5vh);
-  margin-bottom: 10vh;
+
   overflow-x: hidden;
 }
 

@@ -18,9 +18,12 @@
 }
 .contentContainer {
   background-color: rgb(255, 255, 255);
-  width: 50vw;
+  width: 100vw;
   height: 100vh;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .helloDiv {
@@ -30,9 +33,16 @@
   justify-content: center;
 }
 
+.hello {
+  font-size: 20px;
+}
+
 .contentContainer2 {
-  background-color: rgb(255, 255, 255);
-  width: 50vw;
-  height: 100vh;
+  background-color: red;
+  width: 90%;
+  overflow: hidden;
   position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
