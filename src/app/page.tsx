@@ -26,7 +26,11 @@ export default function Home() {
         <Header />
 
         <AllTheInfo />
-        <Footer />
+        {/* <Footer /> */}
+        <div
+          style={{ height: "1920px", backgroundColor: "blue" }}
+          className={styles.blueDiv}
+        ></div>
       </main>
     </div>
   );
