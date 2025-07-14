@@ -8,9 +8,18 @@ export default function AllTheInfo() {
 
   const x = useTransform(scrollYProgress, [0, 0.5], ["-100%", "0%"]);
   const x2 = useTransform(scrollYProgress, [0.5, 1], ["0%", "80%"]);
-  const x3 = useTransform(scrollYProgress, [0.5, 1], ["10%", "90%"]);
+  const x3 = useTransform(scrollYProgress, [0.5, 1], ["0%", "90%"]);
   const x4 = useTransform(scrollYProgress, [0.5, 1], ["10%", "90%"]);
-  const x5 = useTransform(scrollYProgress, [0.6, 1], ["100%", "0%"]);
+  const opacity = useTransform(scrollYProgress, [0.6, 1], ["100%", "0%"]);
+
+  const textShadow = useTransform(
+    scrollYProgress,
+    [0.9, 1],
+    [
+      "0 0 5px #4f171e, 0 0 5px #4f171e, 0 0 10px #4f171e, 0 0 05px #4f171e",
+      "0 0 0px #4f171e, 0 0 0px #4f171e, 0 0 0px #4f171e, 0 0 0px #4f171e",
+    ]
+  );
 
   // const x5 = useTransform(scrollYProgress, [0, 0.2], ["100%", "400%"]);
   // const x6 = useTransform(scrollYProgress, [0, 0.5], ["400%", "10%"]);
@@ -26,11 +35,11 @@ export default function AllTheInfo() {
             <h1 className={styles.title}>ALL THE INFO</h1>
             <motion.div
               className={styles.blurContainer}
-              style={{ opacity: x5 }}
+              style={{ opacity }}
             ></motion.div>
             <div className={styles.listDiv}>
-              <motion.ul className={styles.list}>
-                <li>♥ Getting There ♥</li>
+              <motion.ul className={styles.list} style={{ textShadow }}>
+                <li>Getting There</li>
                 <li>Where to Stay</li>
                 <li>Schedule</li>
                 <li>RSVP</li>

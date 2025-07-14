@@ -56,7 +56,7 @@
   align-items: center;
   justify-content: center;
   display: flex;
-  color: #3e1117;
+  color: #4f171e;
 }
 
 .listDiv {
@@ -79,6 +79,7 @@
   font-size: 30px;
   line-height: 3rem;
   margin-top: 100px;
+
   /* height: 60%;
   display: flex;
   justify-content: center;
@@ -87,7 +88,7 @@
 }
 
 .title {
-  font-size: 130px;
+  font-size: 100px;
   white-space: nowrap;
   top: 30;
   position: absolute;
@@ -98,8 +99,8 @@
 .blurContainer {
   background-color: rgb(255, 254, 248);
   z-index: 100;
-  backdrop-filter: (100px);
-  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(10px);
   width: 100%;
 
   height: 100%;
