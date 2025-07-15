@@ -29,7 +29,7 @@ export default function Header() {
         />
         <img
           className={styles.cassyoung}
-          src="/assets/PostCardBack4.png"
+          src="/assets/PostcardBack4.png"
           alt="Envelope"
           style={{ display: isFlipped ? "block" : "none" }}
         />
