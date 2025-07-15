@@ -68,6 +68,7 @@
   align-items: center;
   justify-content: center;
   display: flex;
+  flex-direction: column;
   color: #4f171e;
 }
 
@@ -102,8 +103,8 @@
 .title {
   font-size: 100px;
   white-space: nowrap;
-  top: 30;
-  position: absolute;
+  top: 30px;
+  position: relative;
   font-family: "PPLight";
   z-index: 10000;
 }
@@ -117,7 +118,7 @@
 
   height: 100%;
   overflow: hidden;
-  position: relative;
+  position: sticky;
   align-items: center;
   justify-content: center;
   display: flex;

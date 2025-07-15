@@ -10,7 +10,9 @@ export default function AllTheInfo() {
   const x2 = useTransform(scrollYProgress, [0.5, 1], ["0%", "80%"]);
   const x3 = useTransform(scrollYProgress, [0.5, 1], ["0%", "90%"]);
   // const x4 = useTransform(scrollYProgress, [0.5, 1], ["10%", "90%"]);
-  const opacity = useTransform(scrollYProgress, [0.6, 1], ["100%", "0%"]);
+  const opacity = useTransform(scrollYProgress, [0.6, 1], ["50%", "0%"]);
+
+  const opacity2 = useTransform(scrollYProgress, [0.6, 1], ["0%", "100%"]);
 
   const textShadow = useTransform(
     scrollYProgress,
@@ -38,7 +40,10 @@ export default function AllTheInfo() {
               style={{ opacity }}
             ></motion.div>
             <div className={styles.listDiv}>
-              <motion.ul className={styles.list} style={{ textShadow }}>
+              <motion.ul
+                className={styles.list}
+                style={{ textShadow, opacity: opacity2 }}
+              >
                 <li>Getting There</li>
                 <li>Where to Stay</li>
                 <li>Schedule</li>
