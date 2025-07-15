@@ -1,5 +1,5 @@
 import styles from "./Header.module.css";
-import Image from "next/image";
+
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 

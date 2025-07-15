@@ -6,10 +6,10 @@ export default function AllTheInfo() {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
 
-  const x = useTransform(scrollYProgress, [0, 0.5], ["-100%", "0%"]);
+  const x = useTransform(scrollYProgress, [0, 0.5], ["200%", "0%"]);
   const x2 = useTransform(scrollYProgress, [0.5, 1], ["0%", "80%"]);
   const x3 = useTransform(scrollYProgress, [0.5, 1], ["0%", "90%"]);
-  const x4 = useTransform(scrollYProgress, [0.5, 1], ["10%", "90%"]);
+  // const x4 = useTransform(scrollYProgress, [0.5, 1], ["10%", "90%"]);
   const opacity = useTransform(scrollYProgress, [0.6, 1], ["100%", "0%"]);
 
   const textShadow = useTransform(
@@ -49,9 +49,14 @@ export default function AllTheInfo() {
           </motion.div>
         </motion.div>
         <div className={styles.helloDiv}>
-          <motion.h1 className={styles.AllTheInfoText}>
+          {/* <motion.h1 className={styles.AllTheInfoText}>
             PACK YOUR BAGS
-          </motion.h1>
+          </motion.h1> */}
+          <img
+            className={styles.cherubImg}
+            src="/assets/thisWayToPisa.png"
+            alt="Cherub"
+          />
         </div>
       </div>
     </main>

@@ -29,15 +29,27 @@
 
 .helloDiv {
   display: flex;
-  align-items: end;
+  align-items: center;
   justify-content: center;
   position: absolute;
   height: 100vh;
   width: 100%;
 }
 
-.hello {
-  font-size: 20px;
+.cherubImg {
+  height: 80%;
+  animation: gentleBob 2s ease-in-out infinite;
+  padding-top: 20px;
+}
+
+@keyframes gentleBob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 .AllTheInfoText {
