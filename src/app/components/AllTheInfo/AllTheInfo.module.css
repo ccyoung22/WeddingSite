@@ -1,5 +1,112 @@
 .main {
+  width: 100%;
+  height: 200vh;
+  background-color: transparent;
+  position: relative;
+}
+
+.whiteDiv {
+  width: 100%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+.contentContainer {
+  background-color: rgb(255, 254, 248);
   width: 100vw;
   height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.helloDiv {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+}
+
+.hello {
+  font-size: 20px;
+}
+
+.AllTheInfoText {
+  color: white;
+  font-family: "PPLight";
+  font-size: 170px;
+  letter-spacing: 0.3rem;
+}
+
+.contentContainer2 {
   background-color: transparent;
+  width: 90%;
+  border: 1.5px solid #621c25;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: #4f171e;
+}
+
+.listDiv {
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "PPLight";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.list {
+  list-style: none;
+  text-align: center;
+  font-size: 30px;
+  line-height: 3rem;
+  margin-top: 100px;
+
+  /* height: 60%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5vh; */
+}
+
+.title {
+  font-size: 100px;
+  white-space: nowrap;
+  top: 30;
+  position: absolute;
+  font-family: "PPLight";
+  z-index: 10000;
+}
+
+.blurContainer {
+  background-color: rgb(255, 254, 248);
+  z-index: 100;
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 100%;
+
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }

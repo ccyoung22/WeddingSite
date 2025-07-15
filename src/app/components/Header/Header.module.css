@@ -1,12 +1,13 @@
 .main {
-  width: 100vw;
+  width: 100%;
   min-width: 1200px;
   height: 100vh;
   background-color: transparent;
   display: grid;
   grid-template-columns: repeat(8, 12.5vw);
   grid-template-rows: repeat(8, 12.5vh);
-  margin-bottom: 10vh;
+
+  overflow-x: hidden;
 }
 
 .envelopeContainer {
@@ -14,7 +15,6 @@
   grid-row: 4 / 6;
   justify-self: center;
   align-self: center;
-
   margin-right: 2vw;
   display: flex;
   align-items: center;
@@ -22,16 +22,17 @@
 }
 
 .cassyoung {
-  width: 60vw;
+  width: 55vw;
   justify-self: end;
   align-self: end;
 }
+
 .bottomTextDiv {
   grid-column: 1;
   grid-row: 8;
   align-items: end;
   justify-content: end;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 0 2vw 0 1vw;

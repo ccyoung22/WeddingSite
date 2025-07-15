@@ -1,7 +1,7 @@
 "use client";
 import styles from "./page.module.css";
 import Header from "./components/Header/Header";
-import WereGettingMarried from "./components/WereGettingMarried/WereGettingMarried";
+
 import Footer from "./components/Footer/Footer";
 import AllTheInfo from "./components/AllTheInfo/AllTheInfo";
 import Lenis from "lenis";
@@ -24,9 +24,13 @@ export default function Home() {
     <div className={styles.page}>
       <main className={styles.main}>
         <Header />
-        <WereGettingMarried />
+
         <AllTheInfo />
-        <Footer />
+        {/* <Footer /> */}
+        <div
+          style={{ height: "1920px", backgroundColor: "blue" }}
+          className={styles.blueDiv}
+        ></div>
       </main>
     </div>
   );

@@ -1,8 +1,18 @@
 import styles from "./Header.module.css";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function Header() {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsFlipped((prev) => !prev);
+    }, 1200);
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <main className={styles.main}>
       <motion.div
@@ -13,22 +23,21 @@ export default function Header() {
       >
         <img
           className={styles.cassyoung}
-          src="/assets/darker-card.png"
+          src="/assets/NewPostCard.png"
           alt="Envelope"
+          style={{ display: isFlipped ? "none" : "block" }}
+        />
+        <img
+          className={styles.cassyoung}
+          src="/assets/PostCardBack4.png"
+          alt="Envelope"
+          style={{ display: isFlipped ? "block" : "none" }}
         />
       </motion.div>
-      {/* <div className={styles.bottomTextDiv}>
-        <div>
-          <h1>26/06/26</h1>
-        </div>
-        <div>
-          <h1>TERRICOLA, PISA</h1>
-        </div>
-      </div> */}
 
       {/* <div className={styles.cherubBoy}>
         <Image
-          src={"/assets/cherub-boy.png"}
+          src={"/assets/brownChrub.png"}
           alt={"Cherub"}
           fill
           style={{ objectFit: "contain" }}
