@@ -10,7 +10,7 @@ export default function AllTheInfo() {
   const x2 = useTransform(scrollYProgress, [0.5, 1], ["0%", "100%"]);
   const x3 = useTransform(scrollYProgress, [0.5, 1], ["0%", "100%"]);
   // const x4 = useTransform(scrollYProgress, [0.5, 1], ["10%", "90%"]);
-  const opacity = useTransform(scrollYProgress, [0.6, 1], ["50%", "0%"]);
+  // const opacity = useTransform(scrollYProgress, [0.6, 1], ["50%", "0%"]);
 
   const opacity2 = useTransform(scrollYProgress, [0.6, 1], ["0%", "100%"]);
 
@@ -40,7 +40,7 @@ export default function AllTheInfo() {
                 <motion.img
                   style={{ opacity: opacity2 }}
                   className={styles.folderImg}
-                  src="/assets/folderMockUp.png"
+                  src="/assets/folder2.png"
                   alt="Folder"
                 />
               </div>
