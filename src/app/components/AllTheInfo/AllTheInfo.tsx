@@ -7,8 +7,8 @@ export default function AllTheInfo() {
   const { scrollYProgress } = useScroll({ target: targetRef });
 
   const x = useTransform(scrollYProgress, [0, 0.5], ["200%", "0%"]);
-  const x2 = useTransform(scrollYProgress, [0.5, 1], ["0%", "80%"]);
-  const x3 = useTransform(scrollYProgress, [0.5, 1], ["0%", "90%"]);
+  const x2 = useTransform(scrollYProgress, [0.5, 1], ["0%", "100%"]);
+  const x3 = useTransform(scrollYProgress, [0.5, 1], ["0%", "100%"]);
   // const x4 = useTransform(scrollYProgress, [0.5, 1], ["10%", "90%"]);
   const opacity = useTransform(scrollYProgress, [0.6, 1], ["50%", "0%"]);
 
@@ -22,6 +22,7 @@ export default function AllTheInfo() {
       "0 0 0px #4f171e, 0 0 0px #4f171e, 0 0 0px #4f171e, 0 0 0px #4f171e",
     ]
   );
+  // const x6 = useTransform(scrollYProgress, [0.5, 1], ["0%", "150%"]);
 
   // const x5 = useTransform(scrollYProgress, [0, 0.2], ["100%", "400%"]);
   // const x6 = useTransform(scrollYProgress, [0, 0.5], ["400%", "10%"]);
@@ -34,22 +35,27 @@ export default function AllTheInfo() {
             className={styles.contentContainer2}
             style={{ width: x3, height: x2 }}
           >
-            <h1 className={styles.title}>ALL THE INFO</h1>
-            <motion.div
-              className={styles.blurContainer}
-              style={{ opacity }}
-            ></motion.div>
-            <div className={styles.listDiv}>
-              <motion.ul
-                className={styles.list}
+            <div className={styles.listImgDiv}>
+              <div className={styles.folderDiv}>
+                <motion.img
+                  style={{ opacity: opacity2 }}
+                  className={styles.folderImg}
+                  src="/assets/folderMockUp.png"
+                  alt="Folder"
+                />
+              </div>
+              <motion.div
+                className={styles.listDiv}
                 style={{ textShadow, opacity: opacity2 }}
               >
-                <li>Getting There</li>
-                <li>Where to Stay</li>
-                <li>Schedule</li>
-                <li>RSVP</li>
-                <li>FAQs</li>
-              </motion.ul>
+                <ul className={styles.list}>
+                  <li>Getting There</li>
+                  <li>Where to Stay</li>
+                  <li>Schedule</li>
+                  <li>RSVP</li>
+                  <li>FAQs</li>
+                </ul>
+              </motion.div>
             </div>
           </motion.div>
         </motion.div>
