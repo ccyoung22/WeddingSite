@@ -40,7 +40,7 @@ export default function AllTheInfo() {
                 <motion.img
                   style={{ opacity: opacity2 }}
                   className={styles.folderImg}
-                  src="/assets/folder2.png"
+                  src="/assets/folder3.png"
                   alt="Folder"
                 />
               </div>
