@@ -62,7 +62,7 @@
 .contentContainer2 {
   background-color: transparent;
   width: 90%;
-  border: 1.5px solid #621c25;
+
   overflow: hidden;
   position: relative;
   align-items: center;
@@ -85,7 +85,7 @@
   /* right: 350px; */
   width: 650px;
   white-space: nowrap;
-
+  overflow: visible;
   /* background-color: red; */
 }
 
@@ -94,6 +94,18 @@
   text-align: left;
   font-size: 40px;
   line-height: 3.5rem;
+}
+
+.listItem {
+  cursor: pointer;
+}
+.listItem:hover {
+  transform: scale(1.02);
+  /* 
+  text-shadow: 0 0 5px #4f171e, 0 0 5px #4f171e, 0 0 5px #4f171e; */
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
 }
 
 .title {
