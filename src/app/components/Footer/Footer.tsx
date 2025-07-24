@@ -4,13 +4,15 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <main className={styles.main}>
-      <Image
-        src="/assets/SYT.png"
-        alt="heart"
-        width={1300}
-        height={900}
-        style={{ objectFit: "contain" }}
-      />
+      <div className={styles.content}>
+        <Image
+          src="/assets/hearts-pic.png"
+          alt="heart"
+          width={1100}
+          height={900}
+          style={{ objectFit: "contain" }}
+        />
+      </div>
     </main>
   );
 }
