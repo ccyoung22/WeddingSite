@@ -1,0 +1,35 @@
+.button {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 12px;
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+  color: #4f171e;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+  z-index: 100001;
+}
+
+.button:hover {
+  border: #4f171e 1px solid;
+}
+
+.iconContainer {
+  width: 26px;
+  height: 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.line {
+  width: 26px;
+  height: 2px;
+  background-color: #4f171e;
+  border-radius: 1px;
+  position: absolute;
+}
