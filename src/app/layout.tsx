@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import BurgerMenu from "./components/BurgerMenu/BurgerMenu";
 import "./globals.css";
+import { BrownSectionProvider } from "./contexts/BrownSectionContext";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +16,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <BurgerMenu />
-        {children}
+        <BrownSectionProvider>
+          <BurgerMenu />
+
+          {children}
+        </BrownSectionProvider>
       </body>
     </html>
   );

@@ -2,12 +2,38 @@
 import styles from "./BurgerMenu.module.css";
 import { useRouter } from "next/navigation";
 import MenuButton from "./MenuButton";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useBrownSection } from "../../contexts/BrownSectionContext";
 import { motion, AnimatePresence } from "framer-motion";
 
 const BurgerMenu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
+  const { brownSectionRef, isOverBrownSection, setIsOverBrownSection } =
+    useBrownSection();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const rect = entry.boundingClientRect;
+
+          // Trigger when the white element's bottom is above the burger menu position
+          // Assuming burger menu is at the top, trigger when white element is 20px past the top
+          setIsOverBrownSection(rect.bottom < 20);
+        });
+      },
+      {
+        threshold: [0, 0.1, 0.2, 0.5, 1],
+      }
+    );
+
+    if (brownSectionRef.current) {
+      observer.observe(brownSectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [brownSectionRef, setIsOverBrownSection]);
 
   function handleClick(route: string) {
     router.push(route);
@@ -15,7 +41,11 @@ const BurgerMenu: React.FC = () => {
 
   return (
     <>
-      <MenuButton isOpen={isOpen} setIsOpen={setIsOpen} />
+      <MenuButton
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        isOverBrownSection={isOverBrownSection}
+      />
       <AnimatePresence>
         {isOpen && (
           <>

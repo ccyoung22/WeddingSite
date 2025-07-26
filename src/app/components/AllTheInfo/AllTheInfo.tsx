@@ -3,8 +3,10 @@ import { useRouter } from "next/navigation";
 import styles from "./AllTheInfo.module.css";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { useBrownSection } from "../../contexts/BrownSectionContext";
 
 export default function AllTheInfo() {
+  const { brownSectionRef } = useBrownSection();
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
 
@@ -32,7 +34,11 @@ export default function AllTheInfo() {
   return (
     <main className={styles.main} ref={targetRef}>
       <div className={styles.whiteDiv}>
-        <motion.div className={styles.contentContainer} style={{ x }}>
+        <motion.div
+          className={styles.contentContainer}
+          ref={brownSectionRef}
+          style={{ x }}
+        >
           <motion.div
             className={styles.contentContainer2}
             style={{

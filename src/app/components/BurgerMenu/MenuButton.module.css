@@ -30,7 +30,7 @@
 .line {
   width: 26px;
   height: 2px;
-  background-color: #4f171e;
+  /* background-color: #4f171e; */
   border-radius: 1px;
   position: absolute;
 }
