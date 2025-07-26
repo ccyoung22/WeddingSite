@@ -69,7 +69,7 @@
   justify-content: center;
   display: flex;
   flex-direction: column;
-  color: #4f171e;
+  color: #3e1117;
 }
 
 .listDiv {
@@ -102,7 +102,7 @@
 .listItem:hover {
   transform: scale(1.02);
   /* 
-  text-shadow: 0 0 5px #4f171e, 0 0 5px #4f171e, 0 0 5px #4f171e; */
+  text-shadow: 0 0 5px #3e1117, 0 0 5px #3e1117, 0 0 5px #3e1117; */
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;

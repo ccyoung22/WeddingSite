@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  padding: 12px;
+  padding: 14px;
   background-color: transparent;
   border: none;
   border-radius: 8px;
@@ -10,10 +10,11 @@
   cursor: pointer;
   transition: box-shadow 0.2s ease;
   z-index: 100001;
+  transition: transform 0.2s ease;
 }
 
 .button:hover {
-  border: #4f171e 1px solid;
+  transform: scale(1.15);
 }
 
 .iconContainer {

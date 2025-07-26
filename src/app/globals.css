@@ -73,3 +73,18 @@ body {
   font-style: normal;
   font-display: swap;
 }
+
+::-webkit-scrollbar {
+  width: 9px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(255, 240, 247);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3e1117; /* Your brown color */
+  border: 1px solid transparent; /* Creates 1px gap on all sides */
+  background-clip: content-box;
+  border-radius: 6px;
+}
