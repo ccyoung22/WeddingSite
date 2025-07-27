@@ -2,9 +2,11 @@ import styles from "./Header.module.css";
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useBrownSection } from "../../contexts/BrownSectionContext";
 
 export default function Header() {
   const [isFlipped, setIsFlipped] = useState(false);
+  const { isMobile } = useBrownSection();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -15,25 +17,44 @@ export default function Header() {
   }, []);
   return (
     <main className={styles.main}>
-      <motion.div
-        initial={{ y: 10, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        className={styles.envelopeContainer}
-      >
-        <img
-          className={styles.cassyoung}
-          src="/assets/Newest2.png"
-          alt="Envelope"
-          style={{ display: isFlipped ? "none" : "block" }}
-        />
-        <img
-          className={styles.cassyoung}
-          src="/assets/NewestPostcardBack.png"
-          alt="Envelope"
-          style={{ display: isFlipped ? "block" : "none" }}
-        />
-      </motion.div>
+      {isMobile ? (
+        <div className={styles.mobileHeader}>
+          <div className={styles.fiftyContainer}>
+            <img
+              className={styles.cassyoungMobile}
+              src="/assets/Newest2.png"
+              alt="Envelope"
+            />
+          </div>
+          <div className={styles.fiftyContainer}>
+            <img
+              className={styles.cassyoungMobile}
+              src="/assets/NewestPostcardBack.png"
+              alt="Envelope"
+            />
+          </div>
+        </div>
+      ) : (
+        <motion.div
+          initial={{ y: 10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className={styles.envelopeContainer}
+        >
+          <img
+            className={styles.cassyoung}
+            src="/assets/Newest2.png"
+            alt="Envelope"
+            style={{ display: isFlipped ? "none" : "block" }}
+          />
+          <img
+            className={styles.cassyoung}
+            src="/assets/NewestPostcardBack.png"
+            alt="Envelope"
+            style={{ display: isFlipped ? "block" : "none" }}
+          />
+        </motion.div>
+      )}
     </main>
   );
 }

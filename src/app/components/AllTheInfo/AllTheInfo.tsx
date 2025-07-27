@@ -6,7 +6,7 @@ import { useRef } from "react";
 import { useBrownSection } from "../../contexts/BrownSectionContext";
 
 export default function AllTheInfo() {
-  const { brownSectionRef } = useBrownSection();
+  const { brownSectionRef, isMobile } = useBrownSection();
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
 
@@ -48,12 +48,21 @@ export default function AllTheInfo() {
           >
             <div className={styles.listImgDiv}>
               <div className={styles.folderDiv}>
-                <motion.img
-                  style={{ opacity: opacity2 }}
-                  className={styles.folderImg}
-                  src="/assets/Folder5.png"
-                  alt="Folder"
-                />
+                {isMobile ? (
+                  <motion.img
+                    style={{ opacity: opacity2 }}
+                    className={styles.mobileFolderImg}
+                    src="/assets/mobileFolder.png"
+                    alt="Folder"
+                  />
+                ) : (
+                  <motion.img
+                    style={{ opacity: opacity2 }}
+                    className={styles.folderImg}
+                    src="/assets/Folder5.png"
+                    alt="Folder"
+                  />
+                )}
               </div>
               <motion.div
                 className={styles.listDiv}
@@ -96,9 +105,6 @@ export default function AllTheInfo() {
           </motion.div>
         </motion.div>
         <div className={styles.helloDiv}>
-          {/* <motion.h1 className={styles.AllTheInfoText}>
-            PACK YOUR BAGS
-          </motion.h1> */}
           <img
             className={styles.cherubImg}
             src="/assets/newWhiteChrub.png"

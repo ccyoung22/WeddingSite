@@ -155,3 +155,61 @@
 margin 
   width: 70vw; */
 }
+
+@media (max-width: 768px) {
+  .cherubImg {
+    width: 90vw;
+    height: auto;
+  }
+  .helloDiv {
+    width: 100vw;
+  }
+
+  .listImgDiv {
+    width: 100vw;
+  }
+  .folderImg {
+    width: 1000px;
+    min-width: 800px;
+  }
+  .mobileFolderImg {
+    width: 95vw;
+  }
+
+  .contentContainer2 {
+    width: 100vw;
+  }
+
+  .folderDiv {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+  }
+  /* .listDiv {
+    align-items: center;
+  } */
+
+  .list {
+    font-size: 30px;
+    line-height: 2.2rem;
+  }
+
+  .listDiv {
+    align-items: center;
+  }
+}
+
+/* iPad (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cherubImg {
+    width: 90vw;
+    height: auto;
+  }
+
+  .folderImg {
+    width: 970px;
+    min-width: 800px;
+  }
+}
