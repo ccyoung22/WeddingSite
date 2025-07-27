@@ -23,26 +23,17 @@ export default function Header() {
       >
         <img
           className={styles.cassyoung}
-          src="/assets/NewPostCard.png"
+          src="/assets/Newest2.png"
           alt="Envelope"
           style={{ display: isFlipped ? "none" : "block" }}
         />
         <img
           className={styles.cassyoung}
-          src="/assets/PostcardBack4.png"
+          src="/assets/NewestPostcardBack.png"
           alt="Envelope"
           style={{ display: isFlipped ? "block" : "none" }}
         />
       </motion.div>
-
-      {/* <div className={styles.cherubBoy}>
-        <Image
-          src={"/assets/brownChrub.png"}
-          alt={"Cherub"}
-          fill
-          style={{ objectFit: "contain" }}
-        />
-      </div> */}
     </main>
   );
 }

@@ -12,31 +12,44 @@ const BurgerMenu: React.FC = () => {
   const { brownSectionRef, isOverBrownSection, setIsOverBrownSection } =
     useBrownSection();
 
+  const [reloadObserver, setReloadObserver] = useState(0); // Add this state
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           const rect = entry.boundingClientRect;
-
-          // Trigger when the white element's bottom is above the burger menu position
-          // Assuming burger menu is at the top, trigger when white element is 20px past the top
           setIsOverBrownSection(rect.bottom < 20);
         });
       },
-      {
-        threshold: [0, 0.1, 0.2, 0.5, 1],
-      }
+      { threshold: [0, 0.1, 0.2, 0.5, 1] }
     );
 
     if (brownSectionRef.current) {
       observer.observe(brownSectionRef.current);
+
+      // Check current position immediately
+      const rect = brownSectionRef.current.getBoundingClientRect();
+      setIsOverBrownSection(rect.bottom < 20);
     }
 
     return () => observer.disconnect();
-  }, [brownSectionRef, setIsOverBrownSection]);
+  }, [brownSectionRef, setIsOverBrownSection, reloadObserver]);
 
   function handleClick(route: string) {
     router.push(route);
+
+    // Always restart the observer after any navigation
+    setTimeout(() => {
+      setReloadObserver((prev) => prev + 1);
+
+      // Set to false for non-home pages after observer restarts
+      if (route !== "/") {
+        setTimeout(() => {
+          setIsOverBrownSection(false);
+        }, 10);
+      }
+    }, 100);
   }
 
   return (
@@ -66,16 +79,42 @@ const BurgerMenu: React.FC = () => {
             >
               <div className={styles.menuListContainer}>
                 <ul className={styles.menuList}>
-                  <li onClick={() => handleClick("/")}>Home</li>
-                  <li onClick={() => handleClick("/getting-there")}>
+                  <li
+                    onClick={() => handleClick("/")}
+                    style={{ cursor: "pointer" }}
+                  >
+                    Home
+                  </li>
+                  <li
+                    onClick={() => handleClick("/getting-there")}
+                    style={{ cursor: "pointer" }}
+                  >
                     Getting There
                   </li>
-                  <li onClick={() => handleClick("/where-to-stay")}>
+                  <li
+                    onClick={() => handleClick("/where-to-stay")}
+                    style={{ cursor: "pointer" }}
+                  >
                     Where To Stay
                   </li>
-                  <li onClick={() => handleClick("/schedule")}>Schedule</li>
-                  <li onClick={() => handleClick("/rsvp")}>RSVPs</li>
-                  <li onClick={() => handleClick("/faqs")}>FAQS</li>
+                  <li
+                    onClick={() => handleClick("/schedule")}
+                    style={{ cursor: "pointer" }}
+                  >
+                    Schedule
+                  </li>
+                  <li
+                    onClick={() => handleClick("/rsvp")}
+                    style={{ cursor: "pointer" }}
+                  >
+                    RSVPs
+                  </li>
+                  <li
+                    onClick={() => handleClick("/faqs")}
+                    style={{ cursor: "pointer" }}
+                  >
+                    FAQS
+                  </li>
                 </ul>
               </div>
             </motion.div>
