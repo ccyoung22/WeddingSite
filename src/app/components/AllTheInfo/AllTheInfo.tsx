@@ -101,7 +101,7 @@ export default function AllTheInfo() {
           </motion.h1> */}
           <img
             className={styles.cherubImg}
-            src="/assets/thisWayToPisa.png"
+            src="/assets/newWhiteChrub.png"
             alt="Cherub"
           />
         </div>
