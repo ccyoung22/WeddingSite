@@ -8,7 +8,6 @@
 
 .headerContainer {
   width: 100%;
-
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -20,10 +19,8 @@
   flex-direction: column;
   align-items: center;
   position: fixed;
-  font-size: 21px;
+  font-size: 26px;
   justify-content: center;
-  gap: 200px;
-  padding-top: 180px;
 }
 .rightContainer {
   width: 50%;
@@ -52,38 +49,48 @@
   width: 300px;
   height: 300px;
   position: absolute;
-  top: 20vh;
+  /* top: 20vh; */
+  top: 0;
   left: 50;
   z-index: 101;
+  height: 100vh;
+  display: block;
 }
 .stampImg {
-  width: 200px;
+  width: 10vw;
   position: absolute;
-  top: 50;
-  left: 50;
+  top: 10vh;
+  left: 2vw;
+  z-index: 1001;
+}
+.cherubDiv {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cherubImg {
+  width: 30vh;
+  animation: float 3s ease-in-out infinite;
 }
 
-.stampText {
-  top: 145;
-  left: 102;
-  position: absolute;
-  font-size: 26px;
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
 }
 
-.villaImg {
-  width: 300px;
-
-  object-fit: cover;
-  position: absolute; /* Make sure this is set */
-  top: 0;
-}
 .recommendationText {
   font-size: 30px;
 }
 
 .mainRecommendation {
   height: 100vh;
-
+  min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,6 +99,7 @@
 
 .airportSection {
   height: 100vh;
+  min-height: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,6 +109,7 @@
 
 .weekendSection {
   height: 100vh;
+  min-height: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -135,4 +144,86 @@
 .optionDescription {
   font-size: 18px;
   margin-bottom: 20px;
+}
+
+.mobileStampDiv {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .titleContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    font-size: 26px;
+    justify-content: center;
+  }
+
+  .rightContainer {
+    width: 100%;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #3e1117;
+    background-color: rgb(255, 254, 248);
+    padding: 0 60px 0 60px;
+    color: #3e1117;
+    z-index: 1000;
+  }
+
+  .mobileStampImg {
+    width: 25vw;
+  }
+  .mobileStampDiv {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-right: 15px;
+  }
+
+  .mobileHeartImg {
+    width: 50px;
+  }
+
+  .mainRecommendation {
+    height: 50vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .sectionTitle {
+    font-size: 24px;
+  }
+
+  .sectionTitle2 {
+    font-size: 24px;
+    margin-bottom: 60px;
+  }
+
+  .stampContainer {
+    display: none;
+  }
+
+  .airportSection {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .weekendSection {
+    height: 110vh;
+  }
 }

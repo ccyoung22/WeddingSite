@@ -6,13 +6,15 @@ import { useRef } from "react";
 // const villaDonna = "/assets/VillaDonnaCamilla.jpg";
 // const villa2 = "/assets/villaImg2.jpg";
 // const villa3 = "/assets/villaImg3.png";
-const stamp = "/assets/TerricolaStamp2.png";
+const stamp = "/assets/newStamp.png";
 
 export default function Page() {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
 
   const rotate = useTransform(scrollYProgress, [0, 1], ["0deg", "360deg"]);
+
+  const rotate2 = useTransform(scrollYProgress, [0, 1], ["0deg", "720deg"]);
 
   return (
     <div className={styles.mainContainer} ref={targetRef}>
@@ -23,8 +25,9 @@ export default function Page() {
             className={styles.stampImg}
             style={{ rotate }} // Apply the rotation
           />
-
-          {/* <h1 className={styles.stampText}>Terricciola</h1> */}
+        </div>
+        <div className={styles.cherubDiv}>
+          <img src={"/assets/brownChrub.png"} className={styles.cherubImg} />
         </div>
 
         <h1 className={styles.pageTitle}>Getting There</h1>
@@ -36,6 +39,13 @@ export default function Page() {
               We recommend flying into <strong>Pisa Airport</strong> for the
               most convenient access to our wedding venue.
             </p>
+          </div>
+          <div className={styles.mobileStampDiv}>
+            <motion.img
+              src={stamp}
+              className={styles.mobileStampImg}
+              style={{ rotate: rotate2 }} // Apply the rotation
+            />
           </div>
           <div className={styles.airportSection}>
             <h2 className={styles.sectionTitle}>From Pisa Airport</h2>
@@ -63,6 +73,13 @@ export default function Page() {
                 surrounding area
               </p>
             </div>
+          </div>
+          <div className={styles.mobileStampDiv}>
+            <motion.img
+              src={stamp}
+              className={styles.mobileStampImg}
+              style={{ rotate: rotate2 }} // Apply the rotation
+            />
           </div>
 
           <div className={styles.weekendSection}>
