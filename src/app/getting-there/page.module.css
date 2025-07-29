@@ -1,7 +1,138 @@
-.main {
+.mainContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "PPLight";
+  color: #3e1117;
+}
+
+.headerContainer {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.titleContainer {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  font-size: 21px;
+  justify-content: center;
+  gap: 200px;
+  padding-top: 180px;
+}
+.rightContainer {
+  width: 50%;
+  margin-left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #3e1117;
+  background-color: rgb(255, 254, 248);
+  padding: 0 60px 0 60px;
+  color: #3e1117;
+  z-index: 1000;
+}
+
+.imageContainer {
+  position: relative;
+  width: 20vw; /* Set your desired width */
+  height: 300px; /* Set your desired height */
+  margin: 0 auto; /* Center the container */
+  margin-left: 20vw;
+  overflow: hidden; /* Hide images when they slide off-screen */
+}
+
+.stampContainer {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 20vh;
+  left: 50;
+  z-index: 101;
+}
+.stampImg {
+  width: 200px;
+  position: absolute;
+  top: 50;
+  left: 50;
+}
+
+.stampText {
+  top: 145;
+  left: 102;
+  position: absolute;
+  font-size: 26px;
+}
+
+.villaImg {
+  width: 300px;
+
+  object-fit: cover;
+  position: absolute; /* Make sure this is set */
+  top: 0;
+}
+.recommendationText {
+  font-size: 30px;
+}
+
+.mainRecommendation {
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.airportSection {
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 20px;
+}
+
+.weekendSection {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* gap: 20px; */
+}
+
+.sectionTitle {
+  font-size: 26px;
+}
+
+.sectionTitle2 {
+  font-size: 26px;
+  margin-bottom: 60px;
+}
+
+.sectionIntro {
+  font-size: 22px;
+}
+
+.transportOptions {
+  display: flex;
+  /* gap: 20px; */
+  flex-direction: column;
+}
+
+.optionTitle {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.optionDescription {
+  font-size: 18px;
+  margin-bottom: 20px;
 }
