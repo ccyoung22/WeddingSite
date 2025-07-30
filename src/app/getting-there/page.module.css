@@ -21,6 +21,7 @@
   position: fixed;
   font-size: 26px;
   justify-content: center;
+  /* font-style: italic; */
 }
 .rightContainer {
   width: 50%;

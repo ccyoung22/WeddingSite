@@ -1,7 +1,185 @@
 .main {
-  height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  color: #3e1117;
+  font-family: "PPLight";
+}
+
+.titleContainer {
+  width: 50%;
+  background-color: rgb(255, 254, 248);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.scrollContainer {
+  width: 50%;
+  background-color: rgb(255, 240, 247);
+  padding: 0 60px 0 60px;
+}
+
+.sectionContainer {
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 600px;
+}
+
+.sectionContainerOne {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  min-height: 600px;
+}
+
+.sectionContainerTwo {
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 600px;
+}
+
+.innerSection {
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 350px;
+}
+
+/* .titleText {
+  font-family: "CLight";
+  font-size: 26px;
+} */
+
+.pText {
+  font-size: 20px;
+}
+
+.pText2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.pTextNote {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.locationList {
+  list-style: none;
+  font-size: 18px;
+}
+.locationList li {
+  margin-top: 4px;
+}
+
+.buttons {
+  width: 70%;
+  min-width: 300px;
+  min-height: 40px;
+  padding: 10px 10px 6px 10px;
+  font-family: "CLight";
+  border-radius: 6px;
+  border: 1px solid white;
+  background-color: rgb(255, 254, 248); /* Changed to white */
+  color: #3e1117; /* Changed to brown text */
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  margin: 20px;
+  align-self: center;
+}
+
+.buttons::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #3e1117; /* Changed to brown fill */
+  transition: left 0.3s ease;
+  z-index: 1;
+}
+
+.buttons:hover::before {
+  left: 0;
+}
+
+.buttons:hover {
+  color: rgb(255, 240, 247); /* Changed to light text on hover */
+}
+
+.buttons span {
+  position: relative;
+  z-index: 2;
+}
+
+.buttons:hover span {
+  color: rgb(255, 240, 247); /* Changed to light text on hover */
+}
+
+@media (max-width: 768px) {
+  .titleContainer {
+    width: 100%;
+
+    position: relative;
+  }
+
+  .scrollContainer {
+    width: 100%;
+    background-color: rgb(255, 240, 247);
+    padding: 0 40px 0 40px;
+  }
+
+  .sectionContainerOne {
+    height: 100vh;
+  }
+
+  .sectionContainerTwo {
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 600px;
+  }
+
+  .sectionContainer {
+    height: 100vh;
+    min-height: 600px;
+  }
+
+  .innerSection {
+    height: 100vh;
+
+    gap: 10px;
+    min-height: 350px;
+  }
+
+  .pText2 {
+    font-size: 20px;
+    margin: 10px 0 50px 0;
+  }
 }

@@ -75,6 +75,14 @@ body {
   font-display: swap;
 }
 
+@font-face {
+  font-family: "AScript";
+  src: url("/fonts/AstonScript.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 ::-webkit-scrollbar {
   width: 9px; /* Width of the scrollbar */
 }
