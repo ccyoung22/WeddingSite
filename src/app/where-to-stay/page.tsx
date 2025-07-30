@@ -69,7 +69,7 @@ export default function Page() {
           <p className={styles.pText}>
             <br />
             There are no taxi services in this area, so advance planning is
-            essential.
+            important.
             <br />
             <br />
             While {"we'd"} appreciate knowing your accommodation choice as soon
