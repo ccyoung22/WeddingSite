@@ -24,102 +24,66 @@
 .contentDiv {
   width: 55%;
   height: 80%;
-  margin-left: 20px;
+  margin-left: 50px;
   align-self: center;
   padding: 40px;
   grid-column: 2;
   grid-row: 1;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  flex-direction: row;
+  color: #3e1117;
+  font-family: "PPLight";
 }
 
 /* timeline styles */
-.container {
-  margin: 0 auto;
 
-  font-family: "PPLight";
-  color: #3e1117;
-}
-
-.schedule-item {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 30px;
-  gap: 20px;
-}
-
-.last-item {
-  margin-bottom: 0;
-}
-
-.timeline {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  min-width: 120px;
-}
-
-.time-marker {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-
-.dot {
+.dot,
+.dot2,
+.dot3 {
   width: 6px;
   height: 6px;
   background-color: #3e1117;
   border-radius: 50%;
   z-index: 2;
+  grid-column: 2;
+  justify-self: center;
+  grid-row: 1;
+  transform: translateX(-47%);
+}
+.dot {
+  grid-row: 1;
+}
+
+.dot2 {
+  grid-row: 2;
+}
+.dot3 {
+  grid-row: 3;
 }
 
 .line {
   width: 1px;
-  height: 100px;
+  height: 100%;
   background-color: #3e1117;
-  margin-top: 5px;
+  grid-row: 1/5;
+  grid-column: 2;
+  align-self: center;
+}
+.lineDotDiv {
+  display: grid;
+  height: 80%;
+
+  /* width: 10%; */
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
-.time-label {
-  font-size: 18px;
-  font-weight: 600;
-  text-align: left;
-  margin-left: 10px;
-  line-height: 1.2;
-  color: #3e1117;
-}
+.scheduleInfomration {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  height: 80%;
 
-.event-details {
-  flex: 1;
-  padding-top: 5px;
-}
-
-.event-title {
-  font-size: 24px;
-  font-weight: 600;
-  margin: 0 0 8px 0;
-  color: #3e1117;
-  font-family: "Dancing Script", cursive, serif;
-}
-
-.event-type {
-  font-size: 16px;
-  margin: 5px 0;
-  color: #3e1117;
-  font-weight: 500;
-}
-
-.time {
-  font-size: 16px;
-  margin: 5px 0;
-  color: #3e1117;
-  font-weight: 500;
-}
-
-.location {
-  font-size: 16px;
-  margin: 5px 0;
-  color: #3e1117;
-  font-style: italic;
+  justify-content: space-between;
 }
