@@ -6,6 +6,41 @@
   justify-content: center;
 }
 
+.imageContainer {
+  position: relative;
+  display: inline-block;
+}
+
 .paperImg {
-  width: 800px;
+  height: 80vh;
+  max-height: 1000px;
+  display: block;
+  margin-right: 20px;
+  min-height: 400px;
+}
+
+.textOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%; /* This will be 80% of the image width */
+  text-align: left;
+  pointer-events: none;
+  font-family: "PPLight";
+
+  padding: 20px; /* Add some padding so text doesn't touch edges */
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .paperImg {
+    height: 60vh;
+    max-height: 1000px;
+  }
+
+  .textOverlay {
+    width: 85%; /* Slightly wider on mobile for better readability */
+    padding: 15px;
+  }
 }

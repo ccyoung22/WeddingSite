@@ -19,8 +19,9 @@
   flex-direction: column;
   align-items: center;
   position: fixed;
-  font-size: 26px;
+  font-size: 20px;
   justify-content: center;
+
   /* font-style: italic; */
 }
 .rightContainer {
@@ -65,13 +66,13 @@
   z-index: 1001;
 }
 .cherubDiv {
-  height: 70vh;
+  /* min-height: 70vh; */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .cherubImg {
-  width: 30vh;
+  max-width: 150px;
   animation: float 3s ease-in-out infinite;
 }
 
@@ -106,6 +107,7 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+  max-width: 900px;
 }
 
 .weekendSection {
@@ -115,6 +117,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  max-width: 900px;
   /* gap: 20px; */
 }
 
@@ -225,6 +228,6 @@
   }
 
   .weekendSection {
-    min-height: 900px;
+    min-height: 600px;
   }
 }

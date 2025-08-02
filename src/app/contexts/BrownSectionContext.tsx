@@ -29,7 +29,7 @@ export const BrownSectionProvider = ({
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768); // or whatever breakpoint you want
+      setIsMobile(window.innerWidth <= 1100); // or whatever breakpoint you want
     };
 
     checkMobile();

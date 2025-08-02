@@ -19,18 +19,17 @@ export default function Page() {
   return (
     <div className={styles.mainContainer} ref={targetRef}>
       <div className={styles.titleContainer}>
-        <div className={styles.stampContainer}>
+        {/* <div className={styles.stampContainer}>
           <motion.img
             src={stamp}
             className={styles.stampImg}
             style={{ rotate }} // Apply the rotation
           />
-        </div>
-        <div className={styles.cherubDiv}>
-          <img src={"/assets/brownChrub.png"} className={styles.cherubImg} />
-        </div>
-
+        </div> */}
         <h1 className={styles.pageTitle}>Getting There</h1>
+        {/* <div className={styles.cherubDiv}>
+          <img src={"/assets/brownChrub.png"} className={styles.cherubImg} />
+        </div> */}
       </div>
       <div className={styles.headerContainer}>
         <div className={styles.rightContainer}>
@@ -40,16 +39,15 @@ export default function Page() {
               most convenient access to our wedding venue.
             </p>
           </div>
-          {/* <div className={styles.mobileStampDiv}>
+          <div className={styles.mobileStampDiv}>
             <motion.img
               src={stamp}
               className={styles.mobileStampImg}
               style={{ rotate: rotate2 }} // Apply the rotation
             />
-          </div> */}
+          </div>
           <div className={styles.airportSection}>
             <h2 className={styles.sectionTitle}>From Pisa Airport</h2>
-            <div className={styles.sectionDivider}></div>
 
             <p className={styles.sectionIntro}>
               The wedding venue is a 30-minute drive from Pisa Airport.
