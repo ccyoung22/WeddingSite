@@ -144,14 +144,14 @@
   .titleContainer {
     width: 100%;
     /* min-height: 700px; */
-    height: 100dvh;
+    min-height: 100dvh;
     position: relative;
   }
 
   .scrollContainer {
     width: 100%;
     background-color: rgb(255, 240, 247);
-    padding: 0 40px 0 40px;
+    padding: 0 50px 0 50px;
   }
 
   .sectionContainerOne {

@@ -99,8 +99,8 @@
 }
 
 .airportSection {
-  height: 100vh;
-  min-height: 700px;
+  /* height: 100vh; */
+  min-height: 900px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -154,7 +154,7 @@
 @media (max-width: 768px) {
   .titleContainer {
     width: 100%;
-    height: 100dvh;
+    min-height: 900px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -193,7 +193,7 @@
   }
 
   .mainRecommendation {
-    height: 50dvh;
+    min-height: 600px;
 
     display: flex;
     flex-direction: column;
@@ -216,7 +216,7 @@
   }
 
   .airportSection {
-    height: 100dvh;
+    min-height: 700px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -225,6 +225,6 @@
   }
 
   .weekendSection {
-    height: 110dvh;
+    min-height: 900px;
   }
 }

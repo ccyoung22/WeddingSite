@@ -40,13 +40,13 @@ export default function Page() {
               most convenient access to our wedding venue.
             </p>
           </div>
-          <div className={styles.mobileStampDiv}>
+          {/* <div className={styles.mobileStampDiv}>
             <motion.img
               src={stamp}
               className={styles.mobileStampImg}
               style={{ rotate: rotate2 }} // Apply the rotation
             />
-          </div>
+          </div> */}
           <div className={styles.airportSection}>
             <h2 className={styles.sectionTitle}>From Pisa Airport</h2>
             <div className={styles.sectionDivider}></div>
