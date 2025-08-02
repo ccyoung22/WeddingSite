@@ -154,7 +154,7 @@
 @media (max-width: 768px) {
   .titleContainer {
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -193,7 +193,7 @@
   }
 
   .mainRecommendation {
-    height: 50vh;
+    height: 50dvh;
 
     display: flex;
     flex-direction: column;
@@ -216,7 +216,7 @@
   }
 
   .airportSection {
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -225,6 +225,6 @@
   }
 
   .weekendSection {
-    height: 110vh;
+    height: 110dvh;
   }
 }
