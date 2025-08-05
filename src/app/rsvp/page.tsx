@@ -6,27 +6,26 @@ export default function Page() {
       <div className={styles.imageContainer}>
         <img src={"/assets/RSVP.png"} className={styles.paperImg} />
         <div className={styles.textOverlay}>
-          <p>
-            We {`can't`} wait to celebrate with you! Please send all RSVP
-            information to cjterricciola26@gmail.com
-          </p>{" "}
-          <p>
-            Please confirm whether {`you'll`} be joining us by 1st November
-            2025.{" "}
-          </p>
           <p>When you RSVP, please include:</p>
-          <ul>
-            <li>Names of all guests attending</li>
-            <li>Any dietary requirements or allergies</li>
+          <ul className={styles.list}>
+            <li>- Names of all guests attending</li>
+            <li>- Any dietary requirements or allergies</li>
             <li>
-              Which events {`you'll`} be attending (Friday drinks, Saturday
+              - Which events {`you'll`} be attending (Friday drinks, Saturday
               wedding, Sunday pool party).
             </li>
           </ul>
           <p>
-            Please let us know where {`you'll`}
-            be staying by 1st March 2026 This helps us organise transport and
-            ensures everything runs smoothly over the weekend.{" "}
+            Please send all RSVP information by <strong>November 1st</strong>{" "}
+            to-
+          </p>
+          <p className={styles.email}>
+            <strong>cjterricciola26@gmail.com</strong>
+          </p>
+          <p>
+            Please let us know where {`you'll `}
+            be staying by 1st March 2026. This will help us organise transport
+            and ensures everything runs smoothly over the weekend.{" "}
           </p>
           <p>
             {" "}

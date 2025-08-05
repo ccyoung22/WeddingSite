@@ -4,6 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: #3e1117;
 }
 
 .imageContainer {
@@ -12,8 +13,9 @@
 }
 
 .paperImg {
-  height: 80vh;
+  height: 90vh;
   max-height: 1000px;
+  min-height: 700px;
   display: block;
   margin-right: 20px;
   min-height: 400px;
@@ -21,26 +23,44 @@
 
 .textOverlay {
   position: absolute;
-  top: 50%;
+  top: 63%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%; /* This will be 80% of the image width */
+  width: 80%;
   text-align: left;
   pointer-events: none;
   font-family: "PPLight";
-
-  padding: 20px; /* Add some padding so text doesn't touch edges */
+  gap: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
+.list {
+  list-style: none;
+}
+
+.email {
+  text-align: center;
+  margin: "12px";
+  font-size: "18px";
+}
+
+@media (max-width: 1024px) {
   .paperImg {
-    height: 60vh;
+    height: 65vh;
     max-height: 1000px;
   }
 
   .textOverlay {
     width: 85%; /* Slightly wider on mobile for better readability */
     padding: 15px;
+    font-size: 12px;
+  }
+
+  .email {
+    font-size: 14px;
+    margin: "8px";
   }
 }

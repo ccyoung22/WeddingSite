@@ -12,8 +12,6 @@ export default function Page() {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
 
-  const rotate = useTransform(scrollYProgress, [0, 1], ["0deg", "360deg"]);
-
   const rotate2 = useTransform(scrollYProgress, [0, 1], ["0deg", "720deg"]);
 
   return (

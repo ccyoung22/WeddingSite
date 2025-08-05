@@ -11,7 +11,7 @@ export default function Page() {
     setIsClient(true);
 
     const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
+      setIsMobile(window.innerWidth <= 1024);
     };
 
     checkMobile();
