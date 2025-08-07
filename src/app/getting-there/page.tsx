@@ -17,17 +17,7 @@ export default function Page() {
   return (
     <div className={styles.mainContainer} ref={targetRef}>
       <div className={styles.titleContainer}>
-        {/* <div className={styles.stampContainer}>
-          <motion.img
-            src={stamp}
-            className={styles.stampImg}
-            style={{ rotate }} // Apply the rotation
-          />
-        </div> */}
         <h1 className={styles.pageTitle}>Getting There</h1>
-        {/* <div className={styles.cherubDiv}>
-          <img src={"/assets/brownChrub.png"} className={styles.cherubImg} />
-        </div> */}
       </div>
       <div className={styles.headerContainer}>
         <div className={styles.rightContainer}>

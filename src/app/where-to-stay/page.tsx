@@ -9,7 +9,7 @@ export default function Page() {
       </div>
       <div className={styles.scrollContainer}>
         <div className={styles.sectionContainerOne}>
-          <h2>
+          <h2 style={{ width: "70%", textAlign: "center" }}>
             Given the remote location of our wedding venue, we{`'ll`} be
             organising transport to and from the celebration for all guests.
           </h2>

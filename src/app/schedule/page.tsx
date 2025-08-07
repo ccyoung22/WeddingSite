@@ -30,49 +30,41 @@ export default function Page() {
       {isMobile ? (
         <div className={styles.mobileContainer}>
           {" "}
-          <div className={styles.paperWrapper}>
-            <img
-              src={"/assets/MobileSchedule.webp"}
-              alt="Paper Image"
-              className={styles.paperImg}
-            />
-            <div className={styles.mobileContentDiv}>
-              <div className={styles.lineDotDiv}>
-                <div className={styles.dot}></div>
-                <div className={styles.dot2}></div>
-                <div className={styles.dot3}></div>
+          <div className={styles.mobileContentDiv}>
+            <div className={styles.lineDotDiv}>
+              <div className={styles.dot}></div>
+              <div className={styles.dot2}></div>
+              <div className={styles.dot3}></div>
 
-                <div className={styles.line}></div>
+              <div className={styles.line}></div>
+            </div>
+
+            <div className={styles.scheduleInfomration}>
+              <div className={styles.dayGroup}>
+                <div className={styles.timeLabel}>Friday 19th June</div>
+
+                <h3 className={styles.eventTitle}>Casual Evening Drinks</h3>
+                <p className={styles.location}>Location to be confirmed</p>
               </div>
+              <div className={styles.dayGroup}>
+                <div className={styles.timeLabel}>Saturday 20th June</div>
 
-              <div className={styles.scheduleInfomration}>
-                <div className={styles.dayGroup}>
-                  <div className={styles.timeLabel}>Friday 19th June</div>
+                <h3 className={styles.eventTitle}>Wedding Day</h3>
+                <p className={styles.eventType}>
+                  Wedding ceremony, Dinner and Drinks
+                </p>
+                <p className={styles.time}>4pm(ish) till late</p>
+              </div>
+              <div className={styles.dayGroup}>
+                <div className={styles.timeLabel}>Sunday 21st June</div>
 
-                  <h3 className={styles.eventTitle}>Casual Evening Drinks</h3>
-                  <p className={styles.location}>Location to be confirmed</p>
-                </div>
-                <div className={styles.dayGroup}>
-                  <div className={styles.timeLabel}>Saturday 20th June</div>
-
-                  <h3 className={styles.eventTitle}>Wedding Day</h3>
-                  <p className={styles.eventType}>
-                    Wedding ceremony, Dinner and Drinks
-                  </p>
-                  <p className={styles.time}>4pm(ish) till late</p>
-                </div>
-                <div className={styles.dayGroup}>
-                  <div className={styles.timeLabel}>Sunday 21st June</div>
-
-                  <h3 className={styles.eventTitle}>Pool Party</h3>
-                  <p className={styles.eventType}>
-                    Pizza and beers by the pool
-                  </p>
-                  <p className={styles.time}>Midday onwards</p>
-                </div>
+                <h3 className={styles.eventTitle}>Pool Party</h3>
+                <p className={styles.eventType}>Pizza and beers by the pool</p>
+                <p className={styles.time}>Midday onwards</p>
               </div>
             </div>
           </div>
+          <h1 className={styles.mobileTitleText}>Schedule</h1>
         </div>
       ) : (
         <motion.div
