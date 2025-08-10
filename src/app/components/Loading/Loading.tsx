@@ -10,7 +10,7 @@ const Loading: React.FC = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 1800);
 
     return () => clearTimeout(timer);
   }, [isLoading, setIsLoading]);
@@ -20,6 +20,9 @@ const Loading: React.FC = () => {
       {isLoading && (
         <main className={styles.main}>
           <h1>Loading</h1>
+          <div className={styles.loadingContainer}>
+            <div className={styles.loadingBar}></div>
+          </div>
         </main>
       )}
     </>

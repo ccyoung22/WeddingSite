@@ -1,7 +1,39 @@
 .main {
   width: 100%;
   height: 100%;
-  background-color: red;
+  background-color: rgb(255, 240, 247);
   z-index: 1000000;
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.loadingContainer {
+  width: 300px;
+  height: 12px;
+  border: 2px solid #3e1117;
+  border-radius: 20px;
+  background: transparent;
+  overflow: hidden;
+}
+
+.loadingBar {
+  height: 100%;
+  width: 100%;
+  background-color: #3e1117;
+  border-radius: 18px;
+  transform: translateX(-100%); /* Start completely hidden to the left */
+  animation: slideIn 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
 }

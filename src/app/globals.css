@@ -92,7 +92,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #3e1117; /* Your brown color */
+  background-color: #3e1117;
   border: 1px solid transparent; /* Creates 1px gap on all sides */
   background-clip: content-box;
   border-radius: 6px;

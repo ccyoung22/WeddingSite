@@ -75,7 +75,10 @@ export default function Page() {
         <motion.div
           initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 2 }}
+          transition={{
+            duration: 2,
+            delay: 2,
+          }}
           className={styles.imageDiv}
         >
           <img
