@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
-  color: #681921;
+  color: #3e1117;
   font-family: "PPLight";
 }
 
@@ -99,7 +99,7 @@
   border-radius: 6px;
   border: 1px solid white;
   background-color: rgb(255, 254, 248); /* Changed to white */
-  color: #681921; /* Changed to brown text */
+  color: #3e1117; /* Changed to brown text */
   font-size: 22px;
   display: flex;
   align-items: center;
@@ -119,7 +119,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background-color: #681921; /* Changed to brown fill */
+  background-color: #3e1117; /* Changed to brown fill */
   transition: left 0.3s ease;
   z-index: 1;
 }

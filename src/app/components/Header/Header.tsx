@@ -6,7 +6,7 @@ import { useBrownSection } from "../../contexts/BrownSectionContext";
 
 export default function Header() {
   const [isFlipped, setIsFlipped] = useState(false);
-  const { isMobile } = useBrownSection();
+  const { isMobile, setIsLoading } = useBrownSection();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -15,6 +15,11 @@ export default function Header() {
 
     return () => clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    setIsLoading(true);
+  }, [setIsLoading]);
+
   return (
     <main className={styles.main}>
       {isMobile ? (

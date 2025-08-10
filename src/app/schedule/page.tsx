@@ -2,10 +2,16 @@
 import styles from "./page.module.css";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { useBrownSection } from "../contexts/BrownSectionContext";
 
 export default function Page() {
   const [isMobile, setIsMobile] = useState(false);
   const [isClient, setIsClient] = useState(false);
+  const { setIsLoading } = useBrownSection();
+
+  useEffect(() => {
+    setIsLoading(true);
+  }, [setIsLoading]);
 
   useEffect(() => {
     setIsClient(true);
@@ -20,7 +26,6 @@ export default function Page() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  // Show loading or default state until client-side hydration
   if (!isClient) {
     return <div className={styles.main}>Loading...</div>;
   }

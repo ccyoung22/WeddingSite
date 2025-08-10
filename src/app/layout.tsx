@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import BurgerMenu from "./components/BurgerMenu/BurgerMenu";
 import "./globals.css";
 import { BrownSectionProvider } from "./contexts/BrownSectionContext";
+import Loading from "./components/Loading/Loading";
 
 export const metadata: Metadata = {
   title: "Caitlin & Jake's wedding",
@@ -17,6 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <BrownSectionProvider>
+          <Loading />
           <BurgerMenu />
 
           {children}

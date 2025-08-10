@@ -1,6 +1,6 @@
 "use client";
 import styles from "./BurgerMenu.module.css";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import MenuButton from "./MenuButton";
 import { useState, useEffect } from "react";
 import { useBrownSection } from "../../contexts/BrownSectionContext";
@@ -12,7 +12,8 @@ const BurgerMenu: React.FC = () => {
   const { brownSectionRef, isOverBrownSection, setIsOverBrownSection } =
     useBrownSection();
 
-  const [reloadObserver, setReloadObserver] = useState(0); // Add this state
+  const [reloadObserver, setReloadObserver] = useState(0);
+  const pathname = usePathname();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -28,7 +29,6 @@ const BurgerMenu: React.FC = () => {
     if (brownSectionRef.current) {
       observer.observe(brownSectionRef.current);
 
-      // Check current position immediately
       const rect = brownSectionRef.current.getBoundingClientRect();
       setIsOverBrownSection(rect.bottom < 20);
     }
@@ -39,11 +39,9 @@ const BurgerMenu: React.FC = () => {
   function handleClick(route: string) {
     router.push(route);
 
-    // Always restart the observer after any navigation
     setTimeout(() => {
       setReloadObserver((prev) => prev + 1);
 
-      // Set to false for non-home pages after observer restarts
       if (route !== "/") {
         setTimeout(() => {
           setIsOverBrownSection(false);
@@ -51,6 +49,10 @@ const BurgerMenu: React.FC = () => {
       }
     }, 100);
   }
+
+  useEffect(() => {
+    setIsOverBrownSection(false);
+  }, [pathname, setIsOverBrownSection]);
 
   return (
     <>

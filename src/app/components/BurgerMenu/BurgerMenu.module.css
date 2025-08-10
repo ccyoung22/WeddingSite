@@ -8,9 +8,9 @@
   right: 0;
   left: 0;
   z-index: 10000;
-  color: #681921;
+  color: #3e1117;
   font-family: "PPLight";
-  border-right: 1px solid #681921; /* Brown border on right side */
+  border-right: 1px solid #3e1117; /* Brown border on right side */
   cursor: pointer;
 }
 
@@ -47,13 +47,13 @@
 
 /* First list item - border top and bottom */
 .menuList li:first-child {
-  border-top: 1px solid #681921;
-  border-bottom: 1px solid #681921;
+  border-top: 1px solid #3e1117;
+  border-bottom: 1px solid #3e1117;
 }
 
 /* All other list items - border bottom only */
 .menuList li:not(:first-child) {
-  border-bottom: 1px solid #681921;
+  border-bottom: 1px solid #3e1117;
 }
 
 .menuList li {
@@ -65,6 +65,6 @@
 }
 
 .menuList li:hover {
-  background-color: #681921;
+  background-color: #3e1117;
   color: rgb(255, 254, 248);
 }

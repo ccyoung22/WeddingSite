@@ -6,6 +6,8 @@ interface BrownSectionContextType {
   isOverBrownSection: boolean;
   setIsOverBrownSection: (value: boolean) => void;
   isMobile: boolean;
+  isLoading: boolean;
+  setIsLoading: (value: boolean) => void;
 }
 
 const BrownSectionContext = createContext<BrownSectionContextType | null>(null);
@@ -26,6 +28,7 @@ export const BrownSectionProvider = ({
   const brownSectionRef = useRef<HTMLDivElement | null>(null);
   const [isOverBrownSection, setIsOverBrownSection] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -44,6 +47,8 @@ export const BrownSectionProvider = ({
         isOverBrownSection,
         setIsOverBrownSection,
         isMobile,
+        isLoading,
+        setIsLoading,
       }}
     >
       {children}
