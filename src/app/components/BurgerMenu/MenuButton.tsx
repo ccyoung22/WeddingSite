@@ -41,7 +41,7 @@ export default function AnimatedBurgerMenu({
               y: isOpen ? 0 : -8,
             }}
             transition={{
-              duration: 0.3,
+              duration: 0.4,
               ease: "easeInOut",
             }}
           />
