@@ -7,10 +7,14 @@ import { useBrownSection } from "../../contexts/BrownSectionContext";
 import { motion, AnimatePresence } from "framer-motion";
 
 const BurgerMenu: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
-  const { brownSectionRef, isOverBrownSection, setIsOverBrownSection } =
-    useBrownSection();
+  const {
+    brownSectionRef,
+    isOverBrownSection,
+    setIsOverBrownSection,
+    isOpen,
+    setIsOpen,
+  } = useBrownSection();
 
   const [reloadObserver, setReloadObserver] = useState(0);
   const pathname = usePathname();

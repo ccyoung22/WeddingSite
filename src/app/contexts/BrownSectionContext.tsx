@@ -1,5 +1,13 @@
 "use client";
-import { createContext, useContext, useRef, useState, useEffect } from "react";
+import {
+  createContext,
+  useContext,
+  useRef,
+  useState,
+  useEffect,
+  Dispatch,
+  SetStateAction,
+} from "react";
 
 interface BrownSectionContextType {
   brownSectionRef: React.RefObject<HTMLDivElement | null>;
@@ -8,6 +16,8 @@ interface BrownSectionContextType {
   isMobile: boolean;
   isLoading: boolean;
   setIsLoading: (value: boolean) => void;
+  isOpen: boolean;
+  setIsOpen: Dispatch<SetStateAction<boolean>>;
 }
 
 const BrownSectionContext = createContext<BrownSectionContextType | null>(null);
@@ -29,6 +39,7 @@ export const BrownSectionProvider = ({
   const [isOverBrownSection, setIsOverBrownSection] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -49,6 +60,8 @@ export const BrownSectionProvider = ({
         isMobile,
         isLoading,
         setIsLoading,
+        isOpen,
+        setIsOpen,
       }}
     >
       {children}

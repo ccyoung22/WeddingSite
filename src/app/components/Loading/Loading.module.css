@@ -9,10 +9,12 @@
   justify-content: center;
   flex-direction: column;
   gap: 20px;
+  font-family: "PPLight";
+  color: #3e1117;
 }
 
 .loadingContainer {
-  width: 300px;
+  width: 200px;
   height: 12px;
   border: 2px solid #3e1117;
   border-radius: 20px;
@@ -36,4 +38,27 @@
   to {
     transform: translateX(0%);
   }
+}
+
+.chrubContainer {
+  animation: gentleBob 1s ease-in-out infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes gentleBob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.loadingText {
+  margin-bottom: 20px;
+}
+.dotsSpan {
+  letter-spacing: 0.5rem;
+  margin-left: 10px;
 }
