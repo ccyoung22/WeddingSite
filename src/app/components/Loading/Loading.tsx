@@ -30,7 +30,7 @@ const Loading: React.FC = () => {
             <BrownChrub />
           </div>
 
-          <h1 className={styles.loadingText}>Loading</h1>
+          <h1 className={styles.loadingText}>Loading ...</h1>
           <div className={styles.loadingContainer}>
             <div className={styles.loadingBar}></div>
           </div>

@@ -10,13 +10,13 @@
   flex-direction: column;
   gap: 20px;
   font-family: "PPLight";
-  color: #3e1117;
+  color: #4a151c;
 }
 
 .loadingContainer {
-  width: 200px;
+  width: 160px;
   height: 12px;
-  border: 2px solid #3e1117;
+  border: 2px solid #4a151c;
   border-radius: 20px;
   background: transparent;
   overflow: hidden;
@@ -25,7 +25,7 @@
 .loadingBar {
   height: 100%;
   width: 100%;
-  background-color: #3e1117;
+  background-color: #4a151c;
   border-radius: 18px;
   transform: translateX(-100%); /* Start completely hidden to the left */
   animation: slideIn 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
@@ -56,9 +56,6 @@
 }
 
 .loadingText {
-  margin-bottom: 20px;
-}
-.dotsSpan {
-  letter-spacing: 0.5rem;
-  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-right: 5px;
 }
