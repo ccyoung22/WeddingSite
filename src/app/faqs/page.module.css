@@ -1,7 +1,74 @@
 .main {
   height: 100vh;
   display: flex;
-  flex-direction: column;
+  color: #3e1117;
+  justify-content: flex-end;
+  font-family: "PPLight";
+  flex-direction: row;
+}
+
+.titleContainer {
+  width: 50vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 60px;
+}
+
+.content {
+  width: 50vw;
+  height: 100vh;
+  padding: 80px;
+  padding-top: 120px;
+  background-color: rgb(255, 254, 248);
+  margin: 0;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  justify-content: start;
+  overflow-y: auto;
+}
+
+.question {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.explainerText {
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
+
+    background-color: rgb(255, 254, 248);
+  }
+  .titleContainer {
+    width: auto;
+    height: auto;
+    position: relative;
+    padding: 100px;
+    font-size: 60px;
+  }
+
+  .content {
+    width: auto;
+    height: auto;
+    padding: 0 60px 80px 60px;
+    margin: 0;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    justify-content: start;
+  }
 }

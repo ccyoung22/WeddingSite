@@ -13,7 +13,7 @@ export default function Page() {
   return (
     <div className={styles.main}>
       <div className={styles.imageContainer}>
-        <img src={"/assets/RSVP.png"} className={styles.paperImg} />
+        <img src={"/assets/RSVP2.png"} className={styles.paperImg} />
         <div className={styles.textOverlay}>
           <p>When you RSVP, please include:</p>
           <ul className={styles.list}>
@@ -24,17 +24,17 @@ export default function Page() {
               wedding, Sunday pool party).
             </li>
           </ul>
-          <p>
-            Please send all RSVP information by <strong>November 1st</strong>{" "}
-            to-
-          </p>
-          <p className={styles.email}>
-            <strong>cjterricciola26@gmail.com</strong>
+          <p className={styles.rsvpText}>
+            <strong>
+              Please send all RSVP information by <strong>November 1st</strong>{" "}
+              directly to Caitlin or Jake
+            </strong>
           </p>
           <p>
             Please let us know where {`you'll `}
-            be staying by 1st March 2026. This will help us organise transport
-            and ensures everything runs smoothly over the weekend.{" "}
+            be staying by 1st Feburary 2026 at the latest. This will help us
+            organise transport and ensures everything runs smoothly over the
+            weekend.{" "}
           </p>
           <p>
             {" "}
