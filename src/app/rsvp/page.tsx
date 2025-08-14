@@ -4,7 +4,11 @@ import { useBrownSection } from "../contexts/BrownSectionContext";
 import { useEffect } from "react";
 
 export default function Page() {
-  const { setIsLoading } = useBrownSection();
+  const { setIsLoading, setIsOverBrownSection } = useBrownSection();
+
+  useEffect(() => {
+    setIsOverBrownSection(false);
+  }, [setIsOverBrownSection]);
 
   useEffect(() => {
     setIsLoading(true);

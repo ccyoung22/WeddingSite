@@ -7,11 +7,15 @@ import { useBrownSection } from "../contexts/BrownSectionContext";
 export default function Page() {
   const [isMobile, setIsMobile] = useState(false);
   const [isClient, setIsClient] = useState(false);
-  const { setIsLoading } = useBrownSection();
+  const { setIsLoading, setIsOverBrownSection } = useBrownSection();
 
   useEffect(() => {
     setIsLoading(true);
   }, [setIsLoading]);
+
+  useEffect(() => {
+    setIsOverBrownSection(false);
+  }, [setIsOverBrownSection]);
 
   useEffect(() => {
     setIsClient(true);

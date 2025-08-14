@@ -1,11 +1,9 @@
 "use client";
 import styles from "./page.module.css";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
+import { useBrownSection } from "../contexts/BrownSectionContext";
 
-// const villaDonna = "/assets/VillaDonnaCamilla.jpg";
-// const villa2 = "/assets/villaImg2.jpg";
-// const villa3 = "/assets/villaImg3.png";
 const stamp = "/assets/newStamp.png";
 
 export default function Page() {
@@ -13,6 +11,12 @@ export default function Page() {
   const { scrollYProgress } = useScroll({ target: targetRef });
 
   const rotate2 = useTransform(scrollYProgress, [0, 1], ["0deg", "720deg"]);
+
+  const { setIsOverBrownSection } = useBrownSection();
+
+  useEffect(() => {
+    setIsOverBrownSection(false);
+  }, [setIsOverBrownSection]);
 
   return (
     <div className={styles.mainContainer} ref={targetRef}>
@@ -31,7 +35,7 @@ export default function Page() {
             <motion.img
               src={stamp}
               className={styles.mobileStampImg}
-              style={{ rotate: rotate2 }} // Apply the rotation
+              style={{ rotate: rotate2 }}
             />
           </div>
           <div className={styles.airportSection}>

@@ -1,7 +1,14 @@
 "use client";
 import styles from "./page.module.css";
+import { useEffect } from "react";
+import { useBrownSection } from "../contexts/BrownSectionContext";
 
 export default function Page() {
+  const { setIsOverBrownSection } = useBrownSection();
+
+  useEffect(() => {
+    setIsOverBrownSection(false);
+  }, [setIsOverBrownSection]);
   return (
     <div className={styles.main}>
       <div className={styles.titleContainer}>
