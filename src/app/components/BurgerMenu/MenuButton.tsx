@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 // import { useState } from "react";
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, useEffect } from "react";
 import styles from "./MenuButton.module.css";
 
 interface ButtonProps {
@@ -16,11 +16,15 @@ export default function AnimatedBurgerMenu({
   setIsOpen,
   isOverBrownSection,
 }: ButtonProps) {
-  //   const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    console.log(isOverBrownSection);
+  }, [isOverBrownSection]);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const lineColor = isOverBrownSection && !isOpen ? "#ffddf0" : "#4f171e";
 
   return (
     <>
@@ -32,11 +36,8 @@ export default function AnimatedBurgerMenu({
         <div className={styles.iconContainer}>
           <motion.div
             className={styles.line}
-            style={{
-              backgroundColor:
-                isOverBrownSection && !isOpen ? "#ffddf0" : "#4f171e",
-            }}
             animate={{
+              backgroundColor: lineColor,
               rotate: isOpen ? 45 : 0,
               y: isOpen ? 0 : -8,
             }}
@@ -48,11 +49,8 @@ export default function AnimatedBurgerMenu({
 
           <motion.div
             className={styles.line}
-            style={{
-              backgroundColor:
-                isOverBrownSection && !isOpen ? "#ffddf0" : "#4f171e",
-            }}
             animate={{
+              backgroundColor: lineColor,
               opacity: isOpen ? 0 : 1,
               x: isOpen ? 20 : 0,
             }}
@@ -64,11 +62,8 @@ export default function AnimatedBurgerMenu({
 
           <motion.div
             className={styles.line}
-            style={{
-              backgroundColor:
-                isOverBrownSection && !isOpen ? "#ffddf0" : "#4f171e",
-            }}
             animate={{
+              backgroundColor: lineColor,
               rotate: isOpen ? -45 : 0,
               y: isOpen ? 0 : 8,
             }}
