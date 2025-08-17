@@ -17,11 +17,13 @@
   align-items: center;
   justify-content: center;
   font-size: 60px;
+  pointer-events: none;
 }
 
 .content {
   width: 50vw;
   height: 100vh;
+  min-height: 100vh;
   padding: 80px;
   padding-top: 80px;
   background-color: rgb(255, 254, 248);
@@ -31,7 +33,9 @@
   flex-direction: column;
   font-size: 18px;
   justify-content: start;
-  overflow-y: auto;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
 .question {
