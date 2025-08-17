@@ -23,7 +23,7 @@
   width: 50vw;
   height: 100vh;
   padding: 80px;
-  padding-top: 120px;
+  padding-top: 80px;
   background-color: rgb(255, 254, 248);
   margin: 0;
   gap: 20px;
@@ -41,6 +41,54 @@
 
 .explainerText {
   font-size: 24px;
+}
+
+.buttons {
+  width: 70%;
+  min-width: 300px;
+  min-height: 40px;
+  padding: 10px 10px 6px 10px;
+  font-family: "CLight";
+  border-radius: 6px;
+  border: 1px solid white;
+  background-color: rgb(255, 240, 247);
+  color: #3e1117; /* Changed to brown text */
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  margin: 20px;
+  align-self: center;
+}
+
+.buttons::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #3e1117; /* Changed to brown fill */
+  transition: left 0.3s ease;
+  z-index: 1;
+  color: white;
+}
+
+.buttons:hover::before {
+  left: 0;
+}
+
+.buttons:hover {
+  color: rgb(255, 240, 247); /* Changed to light text on hover */
+}
+
+.buttons span {
+  position: relative;
+  z-index: 2;
 }
 
 @media (max-width: 768px) {

@@ -40,10 +40,23 @@ export default function Page() {
           {`aren't `}
           expecting any gifts.
           <br />
+          <br />
           However if you would like to get us something, we are planning on
           going to South America in December for our honeymoon and we would love
-          contribtuions to our honeymoon fund - link
+          contribtuions to our honeymoon fund -
         </p>
+        <button
+          className={styles.buttons}
+          onClick={() =>
+            window.open(
+              "https://www.paypal.com/paypalme/CassHoneymoonFund",
+              "_blank"
+            )
+          }
+        >
+          <span>Honeymoon Fund</span>
+        </button>
+
         <p className={styles.question}>
           {`We've`} put some answers here to some questions {`we've`} had so
           far. We will keep updating this page as we get more questions closer
