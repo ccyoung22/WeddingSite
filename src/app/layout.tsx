@@ -6,7 +6,7 @@ import Loading from "./components/Loading/Loading";
 
 export const metadata: Metadata = {
   title: "Caitlin & Jake's wedding",
-  description: "Created by C.Y :)",
+  description: "Created by CY",
 };
 
 export default function RootLayout({
