@@ -9,6 +9,7 @@ export default function Page() {
   useEffect(() => {
     setIsOverBrownSection(false);
   }, [setIsOverBrownSection]);
+
   return (
     <main className={styles.main}>
       <div className={styles.titleContainer}>

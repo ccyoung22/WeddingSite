@@ -38,6 +38,12 @@ export default function Header() {
               alt="Envelope"
             />
           </div>
+          <div className={styles.arrowContainer}>
+            <div className={styles.arrowDown}>
+              <div className={styles.arrowLineLeft}></div>
+              <div className={styles.arrowLineRight}></div>
+            </div>
+          </div>
         </div>
       ) : (
         <motion.div
@@ -58,6 +64,12 @@ export default function Header() {
             alt="Envelope"
             style={{ display: isFlipped ? "block" : "none" }}
           />
+          <div className={styles.arrowContainer}>
+            <div className={styles.arrowDown}>
+              <div className={styles.arrowLineLeft}></div>
+              <div className={styles.arrowLineRight}></div>
+            </div>
+          </div>
         </motion.div>
       )}
     </main>

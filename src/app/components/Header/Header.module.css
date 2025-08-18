@@ -89,6 +89,59 @@
   margin-top: 2.5vh;
 }
 
+.arrowContainer {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.arrowDown {
+  width: 0;
+  height: 0;
+  position: relative;
+  animation: gentleBounce 2s ease-in-out infinite;
+}
+
+.arrowLineLeft {
+  position: fixed;
+  width: 15px;
+  height: 2px;
+  background-color: #3e1117;
+  transform: rotate(45deg);
+  transform-origin: right center;
+  top: 0px;
+  left: -15px;
+}
+
+.arrowLineRight {
+  position: fixed;
+  width: 15px;
+  height: 2px;
+  background-color: #3e1117;
+  transform: rotate(-45deg);
+  transform-origin: left center;
+  top: 0px;
+  left: 0px;
+}
+
+@keyframes gentleBounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
 @media (max-width: 768px) {
   .main {
     display: flex;
