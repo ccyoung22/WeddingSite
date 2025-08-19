@@ -101,27 +101,31 @@
     flex-direction: column;
     overflow-y: auto;
     height: auto;
+
+    overflow-x: none;
     min-height: 100vh;
 
     background-color: rgb(255, 254, 248);
   }
   .titleContainer {
-    width: auto;
     height: auto;
     position: relative;
     padding: 100px;
+    overflow-x: none;
+    width: 100%;
     font-size: 60px;
   }
 
   .content {
-    width: auto;
+    width: 100%;
     height: auto;
-    padding: 0 70px 80px 70px;
+    padding: 0 60px 80px 60px;
     margin: 0;
     gap: 20px;
     display: flex;
     flex-direction: column;
     font-size: 18px;
     justify-content: start;
+    overflow-x: none;
   }
 }
