@@ -59,10 +59,10 @@ export default function Page() {
         </button>
 
         <p className={styles.question}>
-          {`We've`} put some answers here to some questions {`we've`} had so
-          far. We will keep updating this page as we get more questions closer
-          to the wedding. Feel free to message us with anything else {`you'd`}{" "}
-          like to know!
+          {`We've`} put answers here to some questions {`we've`} had so far. We
+          will keep updating this page as we get more questions closer to the
+          wedding. Feel free to message us with anything else {`you'd`} like to
+          know!
         </p>
       </div>
     </main>
