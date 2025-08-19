@@ -126,6 +126,6 @@
     flex-direction: column;
     font-size: 18px;
     justify-content: start;
-    overflow-x: none;
+    overflow-x: hidden;
   }
 }
