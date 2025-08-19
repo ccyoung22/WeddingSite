@@ -19,7 +19,7 @@ export default function Page() {
         <p className={styles.question}>{`What's`} the dress code? </p>
         <p className={styles.answer}>
           Sexy fun smart casual iconic.{" "}
-          {`(Joking, we actually dont mind what you wear,
+          {`(Joking, we actually don't mind what you wear,
           just wear what you're comfortable in, any colour works)`}{" "}
         </p>
         <p className={styles.question}>Where is the wedding taking place?</p>
@@ -31,7 +31,7 @@ export default function Page() {
           What should I bring for the pool party?{" "}
         </p>
         <p className={styles.answer}>
-          Bikinis/swimming trunks, sun cream and sunglasses.{`It's`} just going
+          Bikinis/swimming trunks, sun cream and sunglasses.{` It's`} just going
           to be a chill lounging in the sun day after the wedding.
         </p>
         <p className={styles.question}>What about gifts?</p>
@@ -44,7 +44,7 @@ export default function Page() {
           <br />
           However if you would like to get us something, we are planning on
           going to South America in December for our honeymoon and we would love
-          contribtuions to our honeymoon fund -
+          contributions to our honeymoon fund -
         </p>
         <button
           className={styles.buttons}

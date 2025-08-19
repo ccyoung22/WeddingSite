@@ -80,8 +80,9 @@ export default function Page() {
             <br />
             <br />
             While {"we'd"} appreciate knowing your accommodation choice as soon
-            as possible, we need your confirmed accommodation details by March
-            1st, 2026 at the latest to guarantee transport arrangements.
+            as possible, we need your confirmed accommodation details by
+            Feburary 1st, 2026 at the latest to guarantee transport
+            arrangements.
             <br />
             <br />
             Please book early if possible and keep us informed to ensure you can

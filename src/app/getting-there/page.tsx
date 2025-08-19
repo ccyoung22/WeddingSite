@@ -43,7 +43,7 @@ export default function Page() {
 
             <p className={styles.sectionIntro}>
               The wedding venue is a 30-minute drive from Pisa Airport.
-              {"You'll"} need to arrange your own transport from the airport to
+              {" You'll"} need to arrange your own transport from the airport to
               your accommodation (see the <em>Where To Stay</em> page for more
               details).
             </p>
